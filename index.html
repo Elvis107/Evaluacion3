@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Evaluacion 3</title>
+</head>
+<body class="container">
+    <div class="row" >
+        <h1>CALORIAS QUEMADAS</h1>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"><h4>Indique el Peso en kilogramos</h4></label>
+            <input type="text" class="form-control" name="peso" id="peso" placeholder="Ejemplo: 70" onchange="Peso()">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label"><h4>Minutos a Ejercitar</h4></label>
+            <input type="text" class="form-control" name="minutos" id="minutos" placeholder="Ejemplo: 30" onchange="Minutos()">
+          </div>
+          <h4>Elija la actividad</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked onclick="seleccionarOpcion('caminar',3.5)" >
+            <label class="form-check-label" for="flexRadioDefault1">
+              Caminar
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick="seleccionarOpcion('correr',8.0)" >
+            <label class="form-check-label" for="flexRadioDefault2">
+              Correr
+            </label>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary" type="submit" onclick="CalcularCalorias()">Enviar formulario</button>
+          </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3 class="text-primary">Resultado</h3>
+        </div>
+        <div class="col-12" id="resulta">
+        </div>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
